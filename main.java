@@ -6,7 +6,7 @@ class Omothello {
   public static final int NUM =  12;
 
   public static void main( String[] args ) {
-    // $BJQ?t@k8@(B
+    // 変数宣言
     int turn = 1;
     int[][] board =  {
        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -25,7 +25,7 @@ class Omothello {
     int[][] val_board = new int[NUM][NUM] ;
     Random rand = new Random();
 
-    // $BE@?tHWLL$N@8@.(B
+    // 点数盤面の生成
     for ( int i = 0; i < NUM; i++ ) {
       for ( int j = 0; j < NUM; j++ ) {
         val_board[i][j] = (rand.nextInt(100) - 50);
@@ -37,24 +37,24 @@ class Omothello {
   
   }
   
-  // $BHWLL$N=PNO(B
+  // 盤面の出力
   static void output_bd( int[][] board ) {
 
     for ( int i = 0; i < NUM; i++ ) {
       for ( int j = 0; j < NUM; j++ ) {
         if ( board[i][j] == 1 ) {
-          System.out.print("$B!{(B ");
+          System.out.print("○ ");
         } else if (  board[i][j] == -1 ) { 
-          System.out.print("$B!|(B ");
+          System.out.print("● ");
         } else if (  board[i][j] == 0 ) { 
-          System.out.print("$B!&(B ");
+          System.out.print("・ ");
         }
       }
       System.out.println();
     }
   }
 
-  // $BI>2ACM%\!<%I$N=PNO(B
+  // 評価値ボードの出力
   static void output_vl( int[][] board ) {
 
     for ( int i = 0; i < NUM; i++ ) {
@@ -69,7 +69,7 @@ class Omothello {
     Scanner stdIn = new Scanner(System.in); 
 
     int x = 0;
-    int y = 0; //$BCV$/>l=j$N:BI8(B
+    int y = 0; //置く場所の座標
     
     /*   
     do {
