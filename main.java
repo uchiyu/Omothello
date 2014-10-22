@@ -32,11 +32,31 @@ class Omothello {
       } 
     }
     
-    output_bd( val_board);
+    output_bd( board );
+    output_vl( val_board);
   
   }
-
+  
+  // 盤面の出力
   static void output_bd( int[][] board ) {
+
+    for ( int i = 0; i < NUM; i++ ) {
+      for ( int j = 0; j < NUM; j++ ) {
+        if ( board[i][j] == 1 ) {
+          System.out.print("○ ");
+        } else if (  board[i][j] == -1 ) { 
+          System.out.print("● ");
+        } else if (  board[i][j] == 0 ) { 
+          System.out.print("・ ");
+        }
+      }
+      System.out.println();
+    }
+  }
+
+  // 評価値ボードの出力
+  static void output_vl( int[][] board ) {
+
     for ( int i = 0; i < NUM; i++ ) {
       for ( int j = 0; j < NUM; j++ ) {
         System.out.printf("%3d ", board[i][j]);
@@ -48,12 +68,18 @@ class Omothello {
   static void process( int[][] board, int[][] val_board, int turn  ) {
     Scanner stdIn = new Scanner(System.in); 
 
-    int x = ;
+    int x = 0;
     int y = 0; //置く場所の座標
     
-    
-    
-    
+    /*   
+    do {
+      System.out.println("x =");
+      
+      System.out.println("y =");
+
+
+      System.out.println("OK? [y]or[n]");
+    } while (  );*/  
   }
 
 }
